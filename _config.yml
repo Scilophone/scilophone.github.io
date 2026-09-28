@@ -1,0 +1,52 @@
+title: Scilophone
+description: Science, in full. The long-form companion to our Instagram posts.
+url: "https://scilophone.github.io"
+baseurl: ""
+lang: en
+instagram: scilophone
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  footnote_backlink: "↩︎"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# English articles live in en/_posts, Traditional Chinese in zh/_posts.
+# A shared `ref` in front matter links an article to its translation.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      lang: en
+  - scope:
+      path: "zh"
+    values:
+      lang: zh-Hant
+  - scope:
+      path: "en"
+      type: posts
+    values:
+      layout: post
+      lang: en
+      permalink: /articles/:slug/
+  - scope:
+      path: "zh"
+      type: posts
+    values:
+      layout: post
+      lang: zh-Hant
+      permalink: /zh/articles/:slug/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

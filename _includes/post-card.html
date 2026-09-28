@@ -1,0 +1,23 @@
+{%- assign post = include.post -%}
+<article class="card{% if include.feature %} card-feature{% endif %}">
+  <a class="card-link" href="{{ post.url | relative_url }}">
+    {%- if post.cover %}
+    <img class="card-cover" src="{{ post.cover | relative_url }}" alt="" loading="lazy">
+    {%- endif %}
+    <div class="card-body">
+      <p class="kicker">
+        {%- if post.sample %}<span class="badge">{{ t.sample_badge }}</span>{% endif -%}
+        {{ post.tags | join: " · " }}
+      </p>
+      <h3 class="card-title">{{ post.title }}</h3>
+      {%- if post.description %}
+      <p class="card-desc">{{ post.description }}</p>
+      {%- endif %}
+      <p class="meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: t.date_format }}</time>
+        <span aria-hidden="true">·</span>
+        {% include reading-time.html content=post.content lang=post.lang %} {{ t.min_read }}
+      </p>
+    </div>
+  </a>
+</article>

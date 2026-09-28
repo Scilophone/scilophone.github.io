@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- include i18n.html -%}
+<article class="post">
+  <div class="container-narrow">
+    {%- if page.sample %}
+    <p class="notice" role="note">{{ t.sample_notice }}</p>
+    {%- endif %}
+
+    <header class="post-header">
+      {%- if page.tags.size > 0 %}
+      <p class="kicker">{{ page.tags | join: " · " }}</p>
+      {%- endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      {%- if page.description %}
+      <p class="dek">{{ page.description }}</p>
+      {%- endif %}
+      <p class="meta">
+        {%- if page.authors %}
+        <span>{{ t.by }} {{ page.authors | join: ", " }}</span>
+        <span aria-hidden="true">·</span>
+        {%- endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: t.date_format }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{% include reading-time.html content=content lang=lang %} {{ t.min_read }}</span>
+        {%- if translation %}
+        <span aria-hidden="true">·</span>
+        <a href="{{ translation.url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ t.read_in_other }}</a>
+        {%- endif %}
+      </p>
+    </header>
+  </div>
+
+  {%- if page.cover %}
+  <figure class="post-cover container-wide">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | escape }}">
+  </figure>
+  {%- endif %}
+
+  <div class="container-narrow">
+    {%- if page.instagram or page.key_points %}
+    <aside class="brief">
+      {%- if page.key_points %}
+      <h2 class="brief-title">{{ t.in_brief }}</h2>
+      <ul>
+        {%- for point in page.key_points %}
+        <li>{{ point | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- if page.instagram %}
+      <p class="brief-ig">
+        {{ t.instagram_cta }}
+        <a href="{{ page.instagram }}">{{ t.instagram_link }} <span aria-hidden="true">→</span></a>
+      </p>
+      {%- endif %}
+    </aside>
+    {%- endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <footer class="post-footer">
+      {%- if page.tags.size > 0 %}
+      <ul class="tags">
+        {%- for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+      <nav class="post-nav">
+        <a href="{{ t.home_url | relative_url }}"><span aria-hidden="true">←</span> {{ t.back }}</a>
+        {%- if translation %}
+        <a href="{{ translation.url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ t.read_in_other }}</a>
+        {%- endif %}
+      </nav>
+    </footer>
+  </div>
+</article>

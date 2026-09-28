@@ -1,0 +1,23 @@
+{%- comment -%}
+  Sets the language variables every layout uses:
+  lang, t (interface text), other_lang, other_t, translation (the same page in
+  the other language, if one exists) and switch_url (where the language link goes).
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == "en" -%}
+  {%- assign other_lang = "zh-Hant" -%}
+{%- else -%}
+  {%- assign other_lang = "en" -%}
+{%- endif -%}
+{%- assign other_t = site.data.i18n[other_lang] -%}
+{%- assign translation = nil -%}
+{%- if page.ref -%}
+  {%- assign all_docs = site.posts | concat: site.pages -%}
+  {%- assign translation = all_docs | where: "ref", page.ref | where: "lang", other_lang | first -%}
+{%- endif -%}
+{%- if translation -%}
+  {%- assign switch_url = translation.url -%}
+{%- else -%}
+  {%- assign switch_url = other_t.home_url -%}
+{%- endif -%}

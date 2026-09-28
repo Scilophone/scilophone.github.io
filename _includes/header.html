@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ t.home_url | relative_url }}">
+      {% include logo.svg %}
+      <span>{{ site.title }}</span>
+    </a>
+    <nav class="site-nav" aria-label="{{ t.articles }}">
+      <a href="{{ t.home_url | relative_url }}"{% if page.url == t.home_url %} aria-current="page"{% endif %}>{{ t.articles }}</a>
+      <a href="{{ t.about_url | relative_url }}"{% if page.url == t.about_url %} aria-current="page"{% endif %}>{{ t.about }}</a>
+      <a class="lang-switch" href="{{ switch_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ t.switch_label }}</a>
+    </nav>
+  </div>
+</header>

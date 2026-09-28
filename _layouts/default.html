@@ -1,0 +1,15 @@
+<!doctype html>
+{%- include i18n.html %}
+<html lang="{{ lang }}">
+<head>
+{% include head.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ t.skip }}</a>
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

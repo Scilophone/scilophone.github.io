@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      {% include logo.svg %}
+      <p>{{ t.footer }}</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://www.instagram.com/{{ site.instagram }}/">Instagram</a></li>
+      <li><a href="{{ '/feed.xml' | relative_url }}">{{ t.rss }}</a></li>
+      <li><a href="{{ switch_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ other_t.name }}</a></li>
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,57 @@
+# Interface text for each language. Article text lives in the articles themselves.
+
+en:
+  name: English
+  switch_label: 中文
+  home_url: /
+  about_url: /about/
+  date_format: "%-d %B %Y"
+  skip: Skip to content
+  articles: Articles
+  about: About
+  hero_title: Science, in full.
+  hero_body: Our Instagram posts give you the key idea in a few slides. Here is the full story behind each one, with the context, the evidence and the sources.
+  follow: Follow @scilophone on Instagram
+  latest: Latest articles
+  no_articles: No articles yet.
+  min_read: min read
+  by: By
+  in_brief: In brief
+  instagram_cta: This article expands on one of our Instagram posts.
+  instagram_link: See the post
+  sample_notice: "Sample article: this page shows what an article looks like on the site. Replace or delete it before launch."
+  sample_badge: Sample
+  read_in_other: 閱讀中文版
+  back: All articles
+  footer: A science media project. Articles are the long-form companion to our Instagram posts.
+  rss: RSS feed
+  not_found_title: Page not found
+  not_found_body: This page may have moved or been removed.
+
+zh-Hant:
+  name: 繁體中文
+  switch_label: English
+  home_url: /zh/
+  about_url: /zh/about/
+  date_format: "%Y年%-m月%-d日"
+  skip: 跳至內容
+  articles: 文章
+  about: 關於我們
+  hero_title: 科學，完整呈現。
+  hero_body: 我們的 Instagram 貼文用幾張圖帶出最重要的重點；這裡則是每篇貼文背後的完整故事，包括背景、證據與出處。
+  follow: 在 Instagram 追蹤 @scilophone
+  latest: 最新文章
+  no_articles: 暫時未有文章。
+  min_read: 分鐘閱讀
+  by: 作者：
+  in_brief: 重點摘要
+  instagram_cta: 本文是我們一則 Instagram 貼文的延伸閱讀。
+  instagram_link: 查看貼文
+  sample_notice: 範例文章：此頁示範文章在網站上的樣子。正式上線前請替換或刪除。
+  sample_badge: 範例
+  read_in_other: Read in English
+  back: 所有文章
+  footer: 科學媒體計劃。這裡的文章是我們 Instagram 貼文的完整版。
+  rss: RSS 訂閱
+  not_found_title: 找不到頁面
+  not_found_body: 此頁面可能已被移動或刪除。
