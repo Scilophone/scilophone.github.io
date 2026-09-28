@@ -77,7 +77,7 @@ If an article only exists in one language for now, that's fine. The language swi
 |---|---|
 | Home page headline, button labels, footer text (both languages) | `_data/i18n.yml` |
 | Colours, fonts, spacing | `assets/css/main.css` (colour tokens are at the top) |
-| Logo | `_includes/logo.svg` and `assets/favicon.svg` |
+| Logo | `assets/logo/` (mark, wordmark, full logo) and `assets/favicon.svg` |
 | Site title, description, URL | `_config.yml` |
 | Page structure | `_layouts/` and `_includes/` |
 

@@ -141,8 +141,9 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.01em;
 }
 
-.logo { flex: none; color: var(--ink); }
-.logo-accent { fill: var(--accent); }
+.brand-mark { height: 44px; width: auto; flex: none; }
+.brand-wordmark { height: 24px; width: auto; flex: none; }
+.footer-mark { height: 40px; width: auto; flex: none; }
 
 .site-nav {
   display: flex;
@@ -578,7 +579,9 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 560px) {
   :root { --gutter: 16px; }
   .header-inner { min-height: 56px; }
-  .brand span { font-size: 1.0625rem; }
+  .brand { gap: 6px; }
+  .brand-mark { height: 36px; }
+  .brand-wordmark { height: 17px; }
   .site-nav a { padding: 6px 8px; font-size: 0.875rem; }
   .prose { font-size: 1.125rem; }
   .brief { padding: 16px 18px; }
