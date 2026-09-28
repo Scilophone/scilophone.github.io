@@ -1,9 +1,8 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="{{ t.home_url | relative_url }}" aria-label="{{ site.title }}">
-      <img class="brand-mark" src="{{ '/assets/logo/scilophone-mark.svg' | relative_url }}" alt="" width="46" height="44">
-      <img class="brand-wordmark" src="{{ '/assets/logo/scilophone-wordmark.svg' | relative_url }}" alt="" width="134" height="24">
-    </a>
+      <img class="brand-mark" src="{{ '/assets/logo/scilophone-mark.svg' | relative_url }}" alt="" width="62" height="60">
+      <img class="brand-wordmark" src="{{ '/assets/logo/scilophone-wordmark.svg' | relative_url }}" alt="" width="168" height="30"> </a>
     <nav class="site-nav" aria-label="{{ t.articles }}">
       <a href="{{ t.home_url | relative_url }}"{% if page.url == t.home_url %} aria-current="page"{% endif %}>{{ t.articles }}</a>
       <a href="{{ t.about_url | relative_url }}"{% if page.url == t.about_url %} aria-current="page"{% endif %}>{{ t.about }}</a>

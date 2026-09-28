@@ -128,6 +128,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 16px;
   min-height: 64px;
+  padding-block: 12px;
 }
 
 .brand {
@@ -141,9 +142,9 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.01em;
 }
 
-.brand-mark { height: 44px; width: auto; flex: none; }
-.brand-wordmark { height: 24px; width: auto; flex: none; }
-.footer-mark { height: 40px; width: auto; flex: none; }
+.brand-mark { height: 60px; width: auto; flex: none; }
+.brand-wordmark { height: 30px; width: auto; flex: none; }
+.footer-mark { height: 44px; width: auto; flex: none; }
 
 .site-nav {
   display: flex;
